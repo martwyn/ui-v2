@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply text-gray-800;
+  background: linear-gradient(294.83deg,#b4aae9 -2.08%,#d1c7f4 42.11%,#f0e7ff 93.25%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.absolute-center {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+a:hover {
+  @apply text-sharesies-pink;
+}
