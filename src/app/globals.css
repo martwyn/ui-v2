@@ -17,6 +17,10 @@ body {
   top: 50%;
 }
 
+p a {
+  @apply text-sharesies-pink;
+}
+
 a:hover {
   @apply text-sharesies-pink;
 }
