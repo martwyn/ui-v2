@@ -6,9 +6,11 @@ import useSearch from "@/hooks/useSearch";
 import MagnifyIcon from "@/svgs/magnify.svg";
 import GoIcon from "@/svgs/arrowRight.svg";
 import SpinnerIcon from "@/svgs/spinner.svg";
+import useAssistant from "@/hooks/useAssistant";
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const { assistant } = useAssistant();
   const { loading, performSearch } = useSearch();
   const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,12 +28,12 @@ export default function Search() {
         <div className="flex items-center px-4 bg-white rounded-lg">
           <MagnifyIcon className="flex-shrink-0 w-8 h-8 mr-4 text-gray-400" />
           <input
-            className="flex-grow py-4 text-2xl rounded-lg outline-none"
+            className="flex-grow py-4 rounded-lg outline-none sm:text-base md:text-2xl"
             name="query"
             type="text"
             value={query}
             onChange={inputChangeHandler}
-            placeholder="Go on, ask me something"
+            placeholder={assistant.placeholder}
           />
 
           {!loading ? (

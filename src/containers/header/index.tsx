@@ -3,7 +3,7 @@ import About from "@/containers/about";
 
 export default function Header() {
   return (
-    <header className="fixed flex justify-between w-full p-2">
+    <header className="flex justify-between w-full p-2 md:fixed">
       <About />
       <AssistantSelector />
     </header>
