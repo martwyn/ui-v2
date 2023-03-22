@@ -11,8 +11,8 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center w-full overflow-y-scroll md:h-full ">
           <Image
             alt="Sharies"
-            height={64}
-            width={64}
+            height={128}
+            width={128}
             src="/logo.png"
             className="mb-4 sm:w-24 sm:h-24 md:w-32 md:h-32"
           />
