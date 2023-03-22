@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 
-export type Assistant = "default" | "pirate" | "child" | "coke" | "martwyn";
+export type Assistant = "default" | "pirate" | "grump" | "coke" | "martwyn";
 export type AssistantDetails = {
   name: string;
   icon: string;
@@ -25,12 +25,11 @@ export const allAssistants: { [key in Assistant]: AssistantDetails } = {
     icon: "pirate",
     placeholder: "What do ye desire?",
   },
-  child: {
-    name: "Little Tommy",
-    description:
-      "A young child who is super clued up about Sharesies and thinks it's the bee's knees.",
-    icon: "child",
-    placeholder: "Hi! Whats up?",
+  grump: {
+    name: "Grumpy Simon",
+    description: "A grumpy, grumpy man who is reluctantly helpful.",
+    icon: "grump",
+    placeholder: "Urgh. What do _you_ want?",
   },
   coke: {
     name: "Coca-cola shill",
